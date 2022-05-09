@@ -6,10 +6,10 @@ snowflake:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
 
       # User/password auth
-      user: fokko
+      user: demo_beers_writer
       password: "{{ env_var('SNOWFLAKE_PASSWORD') | as_text }}"
 
-      role: DATAFOLDROLE
+      role: INTEGRATION
       database: INTEGRATION
       warehouse: INTEGRATION
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') | as_text }}"
@@ -22,10 +22,10 @@ production:
       type: snowflake
       account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
 
-      user: fokko
+      user: demo_beers_writer
       password: "{{ env_var('SNOWFLAKE_PASSWORD') | as_text }}"
 
-      role: DATAFOLDROLE
+      role: INTEGRATION
       database: INTEGRATION
       warehouse: INTEGRATION
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') | as_text }}"
